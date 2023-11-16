@@ -18,13 +18,15 @@
   <body>
     <main>
       <section class="card">
-        <div id="frontCard">
-          <p id="cardNumber">0000 0000 0000 0000</p>
-          <p id="cardName">Jane Appleseed</p>
-          <p id="cardDate">00/00</p>
+        <div class="frontCard">
+          <p class="cardNumber" id="cardNumber">0000 0000 0000 0000</p>
+          <p class="cardName" id="cardName">Jane Appleseed</p>
+          <p class="cardDate">
+            <span id="cardDateMM">00</span>/<span id="cardDateYY">00</span>
+          </p>
         </div>
 
-        <div id="backCard">
+        <div class="backCard">
           <p id="cvc">000</p>
         </div>
       </section>
@@ -38,22 +40,24 @@
             name="cardholderName"
             id="id_cardholderName"
             placeholder="e.g. Jane Appleseed"
-            class="invalid"
+            title="firstname lastname"
+            pattern="^[a-zA-Z']{2,} [a-zA-Z]{2,}$"
           />
-          <p class="warning" id="warningName">Invalid format.</p>
+          <p class="warning" id="warningName"></p>
         </div>
 
         <div class="cardNumber">
           <label for="id_cardNumber">Card Number</label>
           <input
             required
-            type="number"
+            type="text"
             name="cardNumber"
             id="id_cardNumber"
             placeholder="e.g. 1234 5678 9123 0000"
-            class="invalid"
+            title="0000 0000 0000 0000"
+            pattern="^[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}$"
           />
-          <p class="warning" id="warningNumber">Wrong format, numbers only.</p>
+          <p class="warning" id="warningNumber"></p>
         </div>
 
         <div class="container">
@@ -61,42 +65,42 @@
             <label for="id_dateMM">Exp. Date (MM/YY)</label>
             <input
               required
-              type="number"
+              type="text"
               name="dateMM"
               id="id_dateMM"
               placeholder="MM"
-              class="invalid"
+              title="01 - 12"
+              pattern="^0[1-9]$|^1[0-2]$"
             />
             <input
               required
-              type="number"
+              type="text"
               name="dateYY"
               id="id_dateYY"
               placeholder="YY"
-              class="invalid"
+              title="00 - 99"
+              pattern="^[0-9][0-9]$"
             />
-            <p class="warning" id="warningDate">Can't be blank.</p>
+            <p class="warning" id="warningDate"></p>
           </div>
 
           <div class="cvc">
             <label for="id_cvc">CVC</label>
             <input
               required
-              type="number"
+              type="text"
               name="cvc"
               id="id_cvc"
               placeholder="e.g. 123"
-              class="invalid"
+              title="000"
+              pattern="^[0-9]{3}$"
             />
-            <p class="warning" id="warningCVC">Can't be blank.</p>
+            <p class="warning" id="warningCVC"></p>
           </div>
         </div>
 
-        <input type="submit" value="Confirm" />
+        <input class="btn btn-violet" type="submit" value="Confirm" />
       </form>
-
-      <!-- Completed state start -->
-      <!-- Thank you! We've added your card details Continue -->
     </main>
 
     <footer class="attribution">
@@ -110,5 +114,7 @@
         >
       </p>
     </footer>
+
+    <script src="./assets/js/app.js"></script>
   </body>
 </html>

@@ -1,4 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap");
+.btn {
+  width: 100%;
+  padding: 12px;
+  margin: 25px 0 0 0;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer; }
+  .btn.btn-violet {
+    color: white;
+    background-color: #21092f; }
+    @media screen and (hover: hover) {
+      .btn.btn-violet:hover {
+        cursor: pointer;
+        background-color: #3f115a; } }
+
 * {
   margin: 0;
   padding: 0;
@@ -32,7 +47,7 @@ main section.card {
     position: absolute; }
     main section.card div p {
       color: white; }
-    main section.card div#frontCard {
+    main section.card div.frontCard {
       left: 0px;
       top: 85px;
       background-image: url(../images/card-logo.svg), url(../images/bg-card-front.png);
@@ -46,22 +61,22 @@ main section.card {
     transform: translateX(-700px) translateY(275px); }
   100% {
     transform: translateX(0px) translateY(0px); } }
-      main section.card div#frontCard p {
+      main section.card div.frontCard p {
         position: absolute; }
-        main section.card div#frontCard p#cardNumber {
+        main section.card div.frontCard p.cardNumber {
           font-size: 1.2em;
           left: 15.5px;
           top: 65px; }
-        main section.card div#frontCard p#cardName {
+        main section.card div.frontCard p.cardName {
           font-size: 0.9em;
           text-transform: uppercase;
           left: 15.5px;
           top: 105px; }
-        main section.card div#frontCard p#cardDate {
+        main section.card div.frontCard p.cardDate {
           font-size: 0.9em;
           left: 185.5px;
           top: 105px; }
-    main section.card div#backCard {
+    main section.card div.backCard {
       right: 0px;
       top: 0px;
       background-image: url(../images/bg-card-back.png);
@@ -74,13 +89,12 @@ main section.card {
     transform: translateX(-700px) translateY(275px); }
   100% {
     transform: translateX(0px) translateY(0px); } }
-      main section.card div#backCard p {
+      main section.card div.backCard p {
         position: absolute;
         left: 175px;
         top: 55px; }
-main form {
-  margin: 50px 0;
-  position: relative;
+main form,
+main section.thanks {
   animation-name: --toLaunch3;
   animation-duration: 1s; }
 @keyframes --toLaunch3 {
@@ -88,6 +102,9 @@ main form {
     transform: translateX(700px) translateY(275px); }
   100% {
     transform: translateX(0px) translateY(0px); } }
+main form {
+  margin: 50px 0;
+  position: relative; }
   main form div label {
     font-size: 1.1em;
     text-transform: uppercase;
@@ -132,42 +149,53 @@ main form {
     main form div.container div.expDate input#id_dateMM,
     main form div.container div.expDate input#id_dateYY {
       width: 45%; }
-  main form input[type="submit"] {
-    width: 100%;
-    padding: 12px;
-    margin: 25px 0 0 0;
-    background-color: #21092f;
-    border-radius: 5px;
-    color: white;
-    font-size: 1.1em;
-    cursor: pointer; }
-    main form input[type="submit"]:hover {
-      background-color: #4e156f; }
-
-footer p {
+main section.thanks {
+  width: 100%;
+  margin: 40px auto;
   text-align: center; }
+  main section.thanks h1 {
+    text-transform: uppercase;
+    font-size: 1.7em;
+    letter-spacing: 5px;
+    color: #21092f;
+    margin: 20px 0; }
+  main section.thanks p {
+    color: #8e8593; }
+  main section.thanks a {
+    display: block;
+    text-decoration: none; }
 
+footer {
+  animation-name: --toLaunch4;
+  animation-duration: 1s; }
+  footer p {
+    text-align: center; }
+@keyframes --toLaunch4 {
+  0% {
+    transform: translateX(-1000px) translateY(275px); }
+  100% {
+    transform: translateX(0px) translateY(0px); } }
 @media screen and (min-width: 440px) {
   main section.card {
     height: 330px; }
     main section.card div {
       width: 350px;
       height: 192px; }
-      main section.card div#frontCard {
+      main section.card div.frontCard {
         top: 137px; }
-        main section.card div#frontCard p#cardNumber {
+        main section.card div.frontCard p.cardNumber {
           font-size: 1.7em;
           left: 24px;
           top: 90px; }
-        main section.card div#frontCard p#cardName {
+        main section.card div.frontCard p.cardName {
           font-size: 1em;
           left: 24px;
           top: 155px; }
-        main section.card div#frontCard p#cardDate {
+        main section.card div.frontCard p.cardDate {
           font-size: 1.1em;
           left: 274px;
           top: 155px; }
-      main section.card div#backCard p {
+      main section.card div.backCard p {
         left: 270px;
         top: 84px; } }
 @media screen and (min-width: 600px) {
@@ -204,30 +232,31 @@ footer p {
       main section.card div {
         width: 447px;
         height: 245px; }
-        main section.card div#frontCard {
+        main section.card div.frontCard {
           top: 0;
           background-position: 25px 25px, center center; }
-          main section.card div#frontCard p#cardNumber {
+          main section.card div.frontCard p.cardNumber {
             font-size: 1.7em;
             left: 25px;
             top: 130px;
             letter-spacing: 5px; }
-          main section.card div#frontCard p#cardName {
+          main section.card div.frontCard p.cardName {
             font-size: 1em;
             left: 25px;
             top: 200px;
             letter-spacing: 5px; }
-          main section.card div#frontCard p#cardDate {
+          main section.card div.frontCard p.cardDate {
             font-size: 1.1em;
             left: 370px;
             top: 200px; }
-        main section.card div#backCard {
+        main section.card div.backCard {
           top: 284px; }
-          main section.card div#backCard p {
+          main section.card div.backCard p {
             font-size: 1.2em;
             left: 345px;
             top: 108px; }
-    main form {
+    main form,
+    main section.thanks {
       width: 400px; } }
 
 /*# sourceMappingURL=style.css.map */

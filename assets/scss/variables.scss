@@ -22,3 +22,28 @@ $color6: hsl(278, 94%, 30%);
     }
   }
 }
+
+@mixin btn($background, $color) {
+  color: $color;
+  background-color: $background;
+
+  @media screen and (hover: hover) {
+    &:hover {
+      cursor: pointer;
+      background-color: lighten($color: $background, $amount: 10);
+    }
+  }
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  margin: 25px 0 0 0;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+
+  &.btn-violet {
+    @include btn($background: $color3, $color: white);
+  }
+}

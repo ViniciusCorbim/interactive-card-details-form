@@ -7,23 +7,23 @@
         width: 350px;
         height: 192px;
 
-        &#frontCard {
+        &.frontCard {
           top: 137px;
 
           p {
-            &#cardNumber {
+            &.cardNumber {
               font-size: 1.7em;
               left: 24px;
               top: 90px;
             }
 
-            &#cardName {
+            &.cardName {
               font-size: 1em;
               left: 24px;
               top: 155px;
             }
 
-            &#cardDate {
+            &.cardDate {
               font-size: 1.1em;
               left: 274px;
               top: 155px;
@@ -31,7 +31,7 @@
           }
         }
 
-        &#backCard {
+        &.backCard {
           p {
             left: 270px;
             top: 84px;
@@ -86,26 +86,26 @@
         width: 447px;
         height: 245px;
 
-        &#frontCard {
+        &.frontCard {
           top: 0;
           background-position: 25px 25px, center center;
 
           p {
-            &#cardNumber {
+            &.cardNumber {
               font-size: 1.7em;
               left: 25px;
               top: 130px;
               letter-spacing: 5px;
             }
 
-            &#cardName {
+            &.cardName {
               font-size: 1em;
               left: 25px;
               top: 200px;
               letter-spacing: 5px;
             }
 
-            &#cardDate {
+            &.cardDate {
               font-size: 1.1em;
               left: 370px;
               top: 200px;
@@ -113,7 +113,7 @@
           }
         }
 
-        &#backCard {
+        &.backCard {
           top: 284px;
 
           p {
@@ -125,7 +125,8 @@
       }
     }
 
-    form {
+    form,
+    section.thanks {
       width: 400px;
     }
   }
