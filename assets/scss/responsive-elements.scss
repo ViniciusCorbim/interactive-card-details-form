@@ -1,0 +1,132 @@
+@media screen and (min-width: 440px) {
+  main {
+    section.card {
+      height: 330px;
+
+      div {
+        width: 350px;
+        height: 192px;
+
+        &#frontCard {
+          top: 137px;
+
+          p {
+            &#cardNumber {
+              font-size: 1.7em;
+              left: 24px;
+              top: 90px;
+            }
+
+            &#cardName {
+              font-size: 1em;
+              left: 24px;
+              top: 155px;
+            }
+
+            &#cardDate {
+              font-size: 1.1em;
+              left: 274px;
+              top: 155px;
+            }
+          }
+        }
+
+        &#backCard {
+          p {
+            left: 270px;
+            top: 84px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    background-size: 470px;
+    background-repeat: repeat-x;
+  }
+
+  main,
+  footer {
+    max-width: 580px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    background-image: url(../images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    background-size: auto 110vh;
+  }
+
+  main,
+  footer {
+    width: 80vw;
+    max-width: none;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+
+    height: 100vh;
+
+    section.card {
+      width: 550px;
+      height: 530px;
+
+      div {
+        width: 447px;
+        height: 245px;
+
+        &#frontCard {
+          top: 0;
+          background-position: 25px 25px, center center;
+
+          p {
+            &#cardNumber {
+              font-size: 1.7em;
+              left: 25px;
+              top: 130px;
+              letter-spacing: 5px;
+            }
+
+            &#cardName {
+              font-size: 1em;
+              left: 25px;
+              top: 200px;
+              letter-spacing: 5px;
+            }
+
+            &#cardDate {
+              font-size: 1.1em;
+              left: 370px;
+              top: 200px;
+            }
+          }
+        }
+
+        &#backCard {
+          top: 284px;
+
+          p {
+            font-size: 1.2em;
+            left: 345px;
+            top: 108px;
+          }
+        }
+      }
+    }
+
+    form {
+      width: 400px;
+    }
+  }
+}

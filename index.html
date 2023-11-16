@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body>
+    <main>
+      <section class="card">
+        <div id="frontCard">
+          <p id="cardNumber">0000 0000 0000 0000</p>
+          <p id="cardName">Jane Appleseed</p>
+          <p id="cardDate">00/00</p>
+        </div>
+
+        <div id="backCard">
+          <p id="cvc">000</p>
+        </div>
+      </section>
+
+      <form action="./assets/html/thanks.html" autocomplete="off">
+        <div class="cardholderName">
+          <label for="id_cardholderName">Cardholder Name</label>
+          <input
+            required
+            type="text"
+            name="cardholderName"
+            id="id_cardholderName"
+            placeholder="e.g. Jane Appleseed"
+            class="invalid"
+          />
+          <p class="warning" id="warningName">Invalid format.</p>
+        </div>
+
+        <div class="cardNumber">
+          <label for="id_cardNumber">Card Number</label>
+          <input
+            required
+            type="number"
+            name="cardNumber"
+            id="id_cardNumber"
+            placeholder="e.g. 1234 5678 9123 0000"
+            class="invalid"
+          />
+          <p class="warning" id="warningNumber">Wrong format, numbers only.</p>
+        </div>
+
+        <div class="container">
+          <div class="expDate">
+            <label for="id_dateMM">Exp. Date (MM/YY)</label>
+            <input
+              required
+              type="number"
+              name="dateMM"
+              id="id_dateMM"
+              placeholder="MM"
+              class="invalid"
+            />
+            <input
+              required
+              type="number"
+              name="dateYY"
+              id="id_dateYY"
+              placeholder="YY"
+              class="invalid"
+            />
+            <p class="warning" id="warningDate">Can't be blank.</p>
+          </div>
+
+          <div class="cvc">
+            <label for="id_cvc">CVC</label>
+            <input
+              required
+              type="number"
+              name="cvc"
+              id="id_cvc"
+              placeholder="e.g. 123"
+              class="invalid"
+            />
+            <p class="warning" id="warningCVC">Can't be blank.</p>
+          </div>
+        </div>
+
+        <input type="submit" value="Confirm" />
+      </form>
+
+      <!-- Completed state start -->
+      <!-- Thank you! We've added your card details Continue -->
+    </main>
+
+    <footer class="attribution">
+      <p>
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          ><strong>Frontend Mento</strong>r</a
+        >. Coded by
+        <a href="https://github.com/ViniciusCorbim" target="_blank"
+          ><strong>Vinicius Corbim</strong></a
+        >
+      </p>
+    </footer>
+  </body>
+</html>
