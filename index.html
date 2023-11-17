@@ -62,12 +62,13 @@
 
         <div class="container">
           <div class="expDate">
-            <label for="id_dateMM">Exp. Date (MM/YY)</label>
+            <label id="date">Exp. Date (MM/YY)</label>
             <input
               required
               type="text"
               name="dateMM"
               id="id_dateMM"
+              aria-labelledby="date"
               placeholder="MM"
               title="01 - 12"
               pattern="^0[1-9]$|^1[0-2]$"
@@ -77,6 +78,7 @@
               type="text"
               name="dateYY"
               id="id_dateYY"
+              aria-labelledby="date"
               placeholder="YY"
               title="00 - 99"
               pattern="^[0-9][0-9]$"
